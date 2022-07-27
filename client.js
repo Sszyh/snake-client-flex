@@ -8,7 +8,8 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("connect", () => {
-    console.log("connected!");
+    console.log("Successfully connected to game server");
+    conn.write("Name: SAH");
   })
   conn.on("data", (data) => {
     console.log(data);
